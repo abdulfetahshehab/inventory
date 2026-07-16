@@ -1,0 +1,53 @@
+
+
+.first{
+    padding: 40px;
+    margin: 20px;
+    background-color:#334155;
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+}
+.first h1{
+    font-family: "Instrument Serif";
+    text-shadow: 4px 4px 5px white;
+}
+
+#saleForm{
+    background-color: aquamarine;
+    padding: 40px;
+    width: fit-content;
+    border-radius: 30px;
+    justify-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    gap: 20px;
+}
+#saleForm button{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    background-color: green;
+    align-self: center;
+}
+
+#saleForm input{
+    margin: 10px 0;
+}
+
+.chart-container{
+    position: relative;
+    width: 100%;
+    height: 280px;
+}
+.filter{
+    background-color: bisque;
+    padding: 20px 40px;
+    margin: 0 60px;
+    border-radius: 30px;
+}
+.tableEdit{
+    background-color: beige;
+    padding: 20px;
+    margin: 30px;
+}
