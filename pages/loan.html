@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/loan.css">
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+
+    <section id="loan">
+        <div id="navbar"></div>
+        <div class="d-flex">
+            <div id="sidebar-container"></div>
+
+            <div class="content p-4">
+
+            <!-- Header -->
+            <div class="mb-4">
+                <h4 class="text-primary mb-1">بسم الله الرحمن الرحيم</h4>
+                <h2 class="fw-bold">Loan Management</h2>
+                <p class="text-muted">View and manage fully paid and outstanding loans</p>
+            </div>
+
+            <!-- ====================== FULLY PAID LOANS ====================== -->
+            <div class="card shadow-sm border-0 mb-5">
+                <div class="card-header bg-success bg-opacity-10 border-0 py-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 text-success">
+                    <i class="bi bi-check-circle-fill me-2"></i>
+                    Fully Paid Loans
+                    </h5>
+                    <span class="badge bg-success" id="fullyPaidCount">0</span>
+                </div>
+                </div>
+                <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0" id="fullyPaidTable">
+                    <thead class="table-light">
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Loan Amount</th>
+                        <th scope="col">Paid Amount</th>
+                        <th scope="col">Payment Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example row (remove later) -->
+                        <tr>
+                        <td>1</td>
+                        <td>Ahmed Mohamed</td>
+                        <td>Product A</td>
+                        <td>ETB 5,000.00</td>
+                        <td>ETB 5,000.00</td>
+                        <td>2026-08-15</td>
+                        <td><span class="badge bg-success">Fully Paid</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-primary">
+                            <i class="bi bi-eye"></i>
+                            </button>
+                        </td>
+                        </tr>
+                        <!-- Dynamic rows will be added here by JavaScript -->
+                    </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+
+            <!-- ====================== UNPAID / PARTIALLY PAID LOANS ====================== -->
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-warning bg-opacity-10 border-0 py-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 text-warning">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    Unpaid & Partially Paid Loans
+                    </h5>
+                    <span class="badge bg-warning text-dark" id="unpaidCount">0</span>
+                </div>
+                </div>
+                <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0" id="unpaidTable">
+                    <thead class="table-light">
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Loan Amount</th>
+                        <th scope="col">Paid Amount</th>
+                        <th scope="col">Remaining</th>
+                        <th scope="col">Due Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example rows (remove later) -->
+                        <tr>
+                        <td>1</td>
+                        <td>Fatima Ali</td>
+                        <td>Product B</td>
+                        <td>ETB 8,000.00</td>
+                        <td>ETB 3,000.00</td>
+                        <td class="text-danger fw-semibold">ETB 5,000.00</td>
+                        <td>2026-09-10</td>
+                        <td><span class="badge bg-warning text-dark">Partially Paid</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-success me-1" title="Record Payment">
+                            <i class="bi bi-cash-coin"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary" title="View">
+                            <i class="bi bi-eye"></i>
+                            </button>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>2</td>
+                        <td>Omar Hassan</td>
+                        <td>Product C</td>
+                        <td>ETB 12,000.00</td>
+                        <td>ETB 0.00</td>
+                        <td class="text-danger fw-semibold">ETB 12,000.00</td>
+                        <td>2026-08-30</td>
+                        <td><span class="badge bg-danger">Unpaid</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-success me-1" title="Record Payment">
+                            <i class="bi bi-cash-coin"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary" title="View">
+                            <i class="bi bi-eye"></i>
+                            </button>
+                        </td>
+                        </tr>
+                        <!-- Dynamic rows will be added here by JavaScript -->
+                    </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+
+         <script src="../asset/script.js"></script>
+
+        <script src="../asset/layout.js"></script>
+
+</body>
+</html>
