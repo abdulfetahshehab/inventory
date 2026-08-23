@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -453,4 +454,461 @@
 
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit</title>
+        <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/profit.css">
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+
+    <div id="navbar"></div>
+    <div class="d-flex">
+        <div id="sidebar-container"></div>
+            <div class="content">
+                <h1>Profit Management</h1>
+            <div class="first">
+                <h1>بسم الله الرحمن الرحيم</h1>
+                <h1>Wellcome to Profit Pages</h1>        
+            </div>
+            <div class="container-fluid py-4">
+                <!--==========================
+                    PAGE HEADER
+                ===========================-->
+                <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+                    <div>
+                        <h2 class="fw-bold mb-1"><i class="bi bi-graph-up-arrow"></i>Profit & Loss Management</h2>
+                        <p class="text-muted mb-0">Monthly Financial Performance Dashboard</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-primary me-2" id="btnRefresh">
+                            <i class="bi bi-arrow-clockwise"></i>Refresh
+                        </button>
+                        <button class="btn btn-outline-success me-2" id="btnExport">
+                            <i class="bi bi-file-earmark-excel"></i>Export
+                        </button>
+                        <button class="btn btn-primary" id="btnPrint">
+                            <i class="bi bi-printer"></i>Print
+                        </button>
+                    </div>
+                </div>
+
+                <!--==========================
+                    FILTER SECTION
+                ===========================-->
+
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Select Month</label>
+                                <select class="form-select" id="filterMonth">
+                                    <option value="all">All Months</option>
+                                    <option value="0">January</option>
+                                    <option value="1">February</option>
+                                    <option value="2">March</option>
+                                    <option value="3">April</option>
+                                    <option value="4">May</option>
+                                    <option value="5">June</option>
+                                    <option value="6">July</option>
+                                    <option value="7">August</option>
+                                    <option value="8">September</option>
+                                    <option value="9">October</option>
+                                    <option value="10">November</option>
+                                    <option value="11">December</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Select Year</label>
+                                <select class="form-select" id="filterYear">
+                                    <option value="2026">2026</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2024">2024</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 d-flex align-items-end">
+
+                                <button class="btn btn-success w-100"
+                                    id="btnApplyFilter">
+
+                                    <i class="bi bi-funnel"></i>
+                                    Apply Filter
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!--==========================
+                    SUMMARY CARDS
+                ===========================-->
+
+                <div class="row g-4 mb-4">
+
+
+                    <!-- Cost of Goods Sold -->
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="card summary-card h-100">
+
+                            <div class="card-body">
+
+                                <div class="d-flex justify-content-between">
+
+                                    <div>
+
+                                        <h6 class="text-muted">
+                                            Cost of Goods Sold
+                                        </h6>
+
+                                        <h3 id="cogsValue">
+                                            ETB 0.00
+                                        </h3>
+
+                                        <small id="cogsChange">
+                                            0%
+                                        </small>
+
+                                    </div>
+
+                                    <i class="bi bi-box-seam display-5"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Gross Profit -->
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="card summary-card h-100">
+
+                            <div class="card-body">
+
+                                <div class="d-flex justify-content-between">
+
+                                    <div>
+
+                                        <h6 class="text-muted">
+                                            Gross Profit
+                                        </h6>
+
+                                        <h3 id="grossProfitValue">
+                                            ETB 0.00
+                                        </h3>
+
+                                        <small id="grossProfitChange">
+                                            0%
+                                        </small>
+
+                                    </div>
+
+                                    <i class="bi bi-cash-stack display-5"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Total Expense -->
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="card summary-card h-100">
+
+                            <div class="card-body">
+
+                                <div class="d-flex justify-content-between">
+
+                                    <div>
+
+                                        <h6 class="text-muted">
+                                            Total Expense
+                                        </h6>
+
+                                        <h3 id="expenseValue">
+                                            ETB 0.00
+                                        </h3>
+
+                                        <small id="expenseChange">
+                                            0%
+                                        </small>
+
+                                    </div>
+
+                                    <i class="bi bi-wallet2 display-5"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Net Profit -->
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="card summary-card h-100">
+
+                            <div class="card-body">
+
+                                <div class="d-flex justify-content-between">
+
+                                    <div>
+
+                                        <h6 class="text-muted">
+                                            Net Profit
+                                        </h6>
+
+                                        <h3 id="netProfitValue">
+                                            ETB 0.00
+                                        </h3>
+
+                                        <small id="netProfitChange">
+                                            0%
+                                        </small>
+
+                                    </div>
+
+                                    <i class="bi bi-graph-up-arrow display-5"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!--==========================
+                    CHARTS
+                ===========================-->
+
+                <div class="row g-4">
+
+
+                    <div class="col-lg-6">
+
+                        <div class="card chart-card">
+
+                            <div class="card-header">
+                                Cost of Goods Sold
+                            </div>
+
+                            <div class="card-body">
+
+                                <canvas id="cogsChart"></canvas>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-lg-6">
+
+                        <div class="card chart-card">
+
+                            <div class="card-header">
+                                Gross Profit
+                            </div>
+
+                            <div class="card-body">
+
+                                <canvas id="grossProfitChart"></canvas>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-lg-6">
+
+                        <div class="card chart-card">
+
+                            <div class="card-header">
+                                Total Expense
+                            </div>
+
+                            <div class="card-body">
+
+                                <canvas id="expenseChart"></canvas>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-lg-6">
+
+                        <div class="card chart-card">
+
+                            <div class="card-header">
+                                Net Profit
+                            </div>
+
+                            <div class="card-body">
+
+                                <canvas id="netProfitChart"></canvas>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!--==========================
+                    FINANCIAL ANALYSIS
+                ===========================-->
+
+                <div class="card mt-4 shadow-sm">
+
+                    <div class="card-header">
+
+                        <h5 class="mb-0">
+
+                            <i class="bi bi-bar-chart-line"></i>
+
+                            Financial Analysis
+
+                        </h5>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div id="financialAnalysis">
+
+                            <!-- JavaScript will generate the analysis here -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <!--==========================
+                    MONTHLY REPORT TABLE
+                ===========================-->
+
+                <div class="card mt-4 shadow-sm">
+
+                    <div class="card-header">
+
+                        <h5 class="mb-0">
+
+                            Monthly Profit & Loss Report
+
+                        </h5>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+
+                            <table class="table table-hover align-middle">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Month</th>
+
+                                        <th>COGS</th>
+
+                                        <th>Gross Profit</th>
+
+                                        <th>Total Expense</th>
+
+                                        <th>Net Profit</th>
+
+                                        <th>Status</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody id="reportTableBody">
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            </div>
+    </div>
+
+<!-- JavaScript -->
+    <script src="../asset/script.js"></script>
+    <script src="../asset/layout.js"></script>
+    <script src="../asset/profit.js"></script>
+
+
+</body>
+>>>>>>> f3b2bc90ea3fb5a137f9296901058b59c4a16e73
 </html>
