@@ -1,28 +1,28 @@
-<<<<<<< HEAD
 
 
 
-let path = window.location.pathname
-    ? "../component/"
-    : "component/";
+// let path = window.location.pathname
+//     ? "../component/"
+//     : "component/";
 
 
-// Navbar
-fetch(path + "navbar.html")
-.then(response => response.text())
-.then(data => {
-    document.getElementById("navbar").innerHTML = data;
-});
+// // Navbar
+// fetch(path + "navbar.html")
+// .then(response => response.text())
+// .then(data => {
+//     document.getElementById("navbar").innerHTML = data;
+// });
 
 
-// Sidebar
-fetch(path + "sidebar.html")
-.then(response => response.text())
-.then(data => {
-    document.getElementById("sidebar-container").innerHTML = data;
-=======
+// // Sidebar
+// fetch(path + "sidebar.html")
+// .then(response => response.text())
+// .then(data => {
+//     document.getElementById("sidebar-container").innerHTML = data;
+// =======
 
 
+// this is for github uploading
 
 let path = window.location.pathname.includes("/pages/")
     ? "../component/"
@@ -48,5 +48,4 @@ fetch(path + "sidebar.html")
 .then(response => response.text())
 .then(data => {
     document.getElementById("sidebar-container").innerHTML = data;
->>>>>>> f3b2bc90ea3fb5a137f9296901058b59c4a16e73
 });
