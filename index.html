@@ -1,246 +1,310 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Control</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-</head>
-<body>
+  </head>
+  <body>
+    <div id="navbar"></div>
 
-
-<div id="navbar"></div>
-
-<div class="d-flex">
-
-<div id="sidebar-container"></div>
-    <div class="content">
-
-
-     <section id="quick ">
-
-        <div class="first">
-            <h1>بسم الله الرحمن الرحيم</h1>
-            <h1>WELLCOME TO TR MENS UNDERWEAR</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis saepe asperiores nisi assumenda rem laborum minus repellendus. Magni, modi? Recusandae in commodi blanditiis beatae! Fugit magni minus laudantium nemo dignissimos.</p>        
-        </div>
-
-      <div  class=" p-5">
-
-        <h2 class="fw-bold m-4 text-info font-monospace">View Quick Overview information about Your Businees and Take an action</h2>
-          <div class="row g-4">
-            <h3 class="text-danger head3"> ֍ Latest Information</h3>
-            <div class="col-lg-3 col-md-6 card-animate">
-              <div class=" dashboard-card sales p-3">
-                <div class="icon">
-                <i class="bi bi-cart-check-fill"></i>
-                </div>
-                <h5>Today's Seles</h5>
-                <h2>ETB150,000</h2>
-                <p class="text-succes">
-                  <i class="bi bi-arrow-up"></i>
-                  +15% from yesterday
-                </p>
-              </div>
+    <div class="d-flex">
+      <div id="sidebar-container"></div>
+      <div class="content">
+        <div class="page-hero">
+          <div class="page-hero-content">
+            <div class="page-hero-icon">
+              <i class="bi bi-graph-up-arrow"></i>
             </div>
-
-            <div class="col-lg-3 col-md-6 card-animate">
-              <div class="dashboard-card profit p-3">
-                <div class="icon">
-                <i class="bi bi-cash-stack"></i>
-                </div>
-                <h5>Today's Profit</h5>
-                <h2>ETB50,000</h2>
-                <p class="text-succes">
-                  <i class="bi bi-graph-up"></i>
-                  This Moths
-                </p>
-              </div>
+            <div class="page-hero-text">
+              <div class="bismillah">بسم الله الرحمن الرحيم</div>
+              <h1 id="welcomeUser">Welcome Admin</h1>
+              <p>
+                Monitor sales, inventory, expenses and profits from one
+                dashboard.
+              </p>
             </div>
-
-            <div class="col-lg-3 col-md-6 card-animate2">
-                <div class="dashboard-card product p-3">
-                <div class="icon">
-                <i class="bi bi-star-fill"></i>
-                </div>
-                <h5>Most Selling</h5>
-                <h2>China Donex</h2>
-                <p class="text-succes">
-                  <i class=" bi bi-arrow-repeat"></i>
-                    30 dz Sold
-                </p>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 card-animate2">
-              <div class="dashboard-card stock p-3">
-                <div class="icon">
-                <i class="bi bi-exclamation-triangle-fill"></i>
-                </div>
-                <h5>Low Stock Items</h5>
-                <h2>Berrak</h2>
-                <p class="text-succes">
-                  <i class="bi bi-arrow-down"></i>
-                  Need Restocking
-                </p>
-              </div>
-            </div>
-            
           </div>
-      </div>
+        </div>
+        <section id="quick ">
+          <div class="infoCards px-2">
+            <h2 class="fw-bold m-4 text-info font-monospace">
+              View Quick Overview information about Your Businees and Take an
+              action
+            </h2>
+            <div class="row g-4">
+              <h3 class="text-danger head3">֍ Latest Information</h3>
+              <div class="col-lg-3 col-md-6 col-12 card-animate">
+                <div class="dashboard-card sales p-3">
+                  <div class="card-header-mobile">
+                    <div class="icon">
+                      <i class="bi bi-cart-check-fill"></i>
+                    </div>
+                    <h5>Today's Seles</h5>
+                  </div>
+                  <h2>ETB150,000</h2>
+                  <p class="text-succes">
+                    <i class="bi bi-arrow-up"></i>
+                    +15% from yesterday
+                  </p>
+                </div>
+              </div>
 
-    </section>
-    
-    <!-- end of my card -->
+              <div class="col-lg-3 col-md-6 col-12 card-animate">
+                <div class="dashboard-card profit p-3">
+                  <div class="card-header-mobile">
+                    <div class="icon">
+                      <i class="bi bi-cash-stack"></i>
+                    </div>
+                    <h5>Today's Profit</h5>
+                  </div>
 
-    <!-- the graph start -->
+                  <h2>ETB50,000</h2>
+                  <p class="text-succes">
+                    <i class="bi bi-graph-up"></i>
+                    This Moths
+                  </p>
+                </div>
+              </div>
 
-    <section id="graph" class="container">
-      <div class="row g-5 row-gap-3 column-gap-lg-5 mx-4">
-        <!-- start weekly seles -->
-         <div class="col-12 col-md-12 col-lg-5 graph-animate">
-            <h3 class="text-info head3"> ⁂ Last weeks sales Information</h3>
-            <p>The graph show's your business last week's sales flow, for more and detail information visit your Sales Dashboard and take an Important action. </p>
-            <div class="chart-container ">
-            <h2 class="text-primary">Weekly Sales</h2>
-            <canvas id="salesChart"></canvas>
-            </div>            
-         </div>
+              <div class="col-lg-3 col-md-6 col-12 card-animate2">
+                <div class="dashboard-card product p-3">
+                  <div class="card-header-mobile">
+                    <div class="icon">
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5>Most Selling</h5>
+                  </div>
 
-        <!-- end weekly seles -->
+                  <h2>China Donex</h2>
+                  <p class="text-succes">
+                    <i class="bi bi-arrow-repeat"></i>
+                    30 dz Sold
+                  </p>
+                </div>
+              </div>
 
-        <!-- start weekly profit -->
-         <div class="col-12 col-md-12 col-lg-5 graph-animate">
-            <h3 class="text-success head3"> ♣ Last weeks Profit Information</h3>
-            <p>The graph show's your business last week's Growth Profit flow only, it's Not Net Profit be aware , for more and detail information visit your Profit Dashboard and take an Important action. </p>
-            <div class="chart-container  ">
-                <h2 class="text-success">Weekly Profit</h2>
+              <div class="col-lg-3 col-md-6 col-12 card-animate2">
+                <div class="dashboard-card stock p-3">
+                  <div class="card-header-mobile">
+                    <div class="icon">
+                      <i class="bi bi-exclamation-triangle-fill"></i>
+                    </div>
+                    <h5>Low Stock Items</h5>
+                  </div>
+
+                  <h2>Berrak</h2>
+                  <p class="text-succes">
+                    <i class="bi bi-arrow-down"></i>
+                    Need Restocking
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12 card-animate">
+                <div class="dashboard-card inventory p-3">
+                  <div class="card-header-mobile">
+                    <div class="icon">
+                      <i class="bi bi-box-seam"></i>
+                    </div>
+                    <h5 class="text-black">Total Shope Inventory Value</h5>
+                  </div>
+
+                  <h2 class="text-black">ETB 1,256,500</h2>
+                  <p class="text-black">Current Shope Stock Value</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12 card-animate">
+                <div class="dashboard-card storeInventory p-3">
+                  <div class="card-header-mobile">
+                    <div class="icon">
+                      <i class="bi bi-box-seam"></i>
+                    </div>
+                    <h5 class="text-black">Total Store Inventory Value</h5>
+                  </div>
+
+                  <h2 class="text-black">ETB 2,856,000</h2>
+                  <p class="text-black">Current Store Stock Value</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- end of my card -->
+
+        <!-- the graph start -->
+
+        <section id="graph" class="container-fluid px-3 px-lg-4 py-3">
+          <div class="row g-4">
+            <!-- Weekly Sales -->
+            <div class="col-12 col-lg-6 mb-4 graph-animate">
+              <h3 class="text-info head3">⁂ Last Month's sales Information</h3>
+              <p class="mb-3">
+                The graph shows your business last Months's sales flow. For more
+                detailed information visit your Sales Dashboard and take an
+                important action.
+              </p>
+              <div class="chart-container">
+                <h2 class="text-primary h5 mb-3">Monthly Sales</h2>
+                <canvas id="salesChart"></canvas>
+              </div>
+            </div>
+
+            <!-- Weekly Profit -->
+            <div class="col-12 col-lg-6 mb-4 graph-animate">
+              <h3 class="text-success head3">
+                ♣ Last weeks Profit Information
+              </h3>
+              <p class="mb-3">
+                The graph shows your business last week's Growth Profit flow
+                only (not Net Profit). For more detailed information visit your
+                Profit Dashboard and take an important action.
+              </p>
+              <div class="chart-container">
+                <h2 class="text-success h5 mb-3">Weekly Profit</h2>
                 <canvas id="profitChart"></canvas>
+              </div>
             </div>
-         </div>
 
-        <!-- end weekly profit -->
-
-        <!-- start top selling -->
-         <div class="col-12 col-md-12 col-lg-5 graph-animate2">
-            <h3 class="text-secondary head3"> ♥ Last weeks Most Selling Inventory</h3>
-            <p>The graph show's your business last week's Most Selling item's flow, for more and detail information visit your Most Selling Dashboard and take an Important action. </p>
-            <div class="chart-container 2">
-            <h2 class="text-info">Weekly Most Selling</h2>
-            <canvas id="mostSalesChart"></canvas>
+            <!-- Most Selling -->
+            <div class="col-12 col-lg-6 mb-4 graph-animate2">
+              <h3 class="text-secondary head3">
+                ♥ Last weeks Most Selling Inventory
+              </h3>
+              <p class="mb-3">
+                The graph shows your business last week's most selling items.
+                For more detailed information visit your Most Selling Dashboard
+                and take an important action.
+              </p>
+              <div class="chart-container">
+                <h2 class="text-info h5 mb-3">Weekly Most Selling</h2>
+                <canvas id="mostSalesChart"></canvas>
+              </div>
             </div>
-         </div>
 
-        <!-- end top selling -->
-
-        <!-- start low stock -->
-         <div class="col-12 col-md-12 col-lg-5 graph-animate2">
-            <h3 class="text-danger head3"> √ Stock Alert Information</h3>
-            <p>The graph show's your inventory Low-Stock and out-Stock item's  flow, for more and detail information visit your Stock Dashboard and take an Important action. </p>
-            <div class="chart-container bg-warning-subtle  2 ">
-                <h5 class="mb-3 fst-italic font-monospace text-danger">Low Stock Items</h5>
+            <!-- Low Stock -->
+            <div class="col-12 col-lg-6 mb-4 graph-animate2">
+              <h3 class="text-danger head3">√ Stock Alert Information</h3>
+              <p class="mb-3">
+                The graph shows your inventory Low-Stock and Out-of-Stock items.
+                For more detailed information visit your Stock Dashboard and
+                take an important action.
+              </p>
+              <div class="chart-container bg-warning-subtle">
+                <h5 class="mb-3 fst-italic font-monospace text-danger">
+                  Low Stock Items
+                </h5>
                 <canvas id="lowStockChart"></canvas>
+              </div>
             </div>
-         </div>
- 
-        <!-- end low stock -->
-      </div>
+          </div>
+        </section>
 
-    </section>
-
-    <!-- start report -->
-<div class="table card shadow-lg border-0 p-3  m-3">
-    <div class="card-header m-3 bg-secondary text-white d-flex justify-content-between align-items-center">
-        <h5 class="">Recent Sales Record</h5>
-    </div>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table id="table" class="table table-hover table-bordered align-middle">
+        <!-- start report -->
+        <div class="table card shadow-lg border-0 p-3 m-3">
+          <div
+            class="card-header m-3 bg-secondary text-white d-flex justify-content-between align-items-center"
+          >
+            <h5 class="">Recent Sales Record</h5>
+          </div>
+          <div class="card-body">
+            <div class="responsive-table">
+              <table
+                id="table"
+                class="table table-hover table-bordered align-middle"
+              >
                 <thead class="table-primary">
-                    <tr>
-                        <th>Time</th>
-                        <th>Sales price</th>
-                        <th>Profit</th>
-                        <th>Sold Qty</th>
-                        <th>Product</th>
-                    </tr>
+                  <tr>
+                    <th>Time</th>
+                    <th>Sales price</th>
+                    <th>Profit</th>
+                    <th>Sold Qty</th>
+                    <th>Product</th>
+                  </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>8:53:16</td>
-                        <td>ETB 18,500</td>
-                        <td>ETB 4,200</td>
-                        <td>6</td>
-                        <td>CK</td>
-                    </tr>
-                    <tr>
-                        <td>9:15:54</td>
-                        <td>ETB 21,300</td>
-                        <td>ETB 5,100</td>
-                        <td>10</td>
-                        <td>Brix J</td>
-                    </tr>
-                    <tr>
-                        <td>9:35:16</td>
-                        <td>ETB 16,900</td>
-                        <td>ETB 3,900</td>
-                        <td>4</td>
-                        <td>Berrak</td>
-                    </tr>
-                    <tr>
-                        <td>11:23:35</td>
-                        <td>ETB 28,800</td>
-                        <td>ETB 3,500</td>
-                        <td>10</td>
-                        <td>Dubai Sock</td>
-                    </tr>
-                    <tr>
-                        <td>15:10:15</td>
-                        <td>ETB 50,100</td>
-                        <td>ETB 7,300</td>
-                        <td>20</td>
-                        <td>China Donex</td>
-                    </tr>
-
+                  <tr>
+                    <td>8:53:16</td>
+                    <td>ETB 18,500</td>
+                    <td>ETB 4,200</td>
+                    <td>6</td>
+                    <td>CK</td>
+                  </tr>
+                  <tr>
+                    <td>9:15:54</td>
+                    <td>ETB 21,300</td>
+                    <td>ETB 5,100</td>
+                    <td>10</td>
+                    <td>Brix J</td>
+                  </tr>
+                  <tr>
+                    <td>9:35:16</td>
+                    <td>ETB 16,900</td>
+                    <td>ETB 3,900</td>
+                    <td>4</td>
+                    <td>Berrak</td>
+                  </tr>
+                  <tr>
+                    <td>11:23:35</td>
+                    <td>ETB 28,800</td>
+                    <td>ETB 3,500</td>
+                    <td>10</td>
+                    <td>Dubai Sock</td>
+                  </tr>
+                  <tr>
+                    <td>15:10:15</td>
+                    <td>ETB 50,100</td>
+                    <td>ETB 7,300</td>
+                    <td>20</td>
+                    <td>China Donex</td>
+                  </tr>
                 </tbody>
-            </table>
+              </table>
+            </div>
+          </div>
         </div>
-    </div>
-</div> 
-     <!-- end report -->
+        <!-- end report -->
 
-
-    <!-- Footer -->
-<footer class="footer mt-5">
-    <div class="container">
-
-        <div class="row gy-4">
-            <div class="col-lg-4 col-md-6">
+        <!-- Footer -->
+        <footer class="footer mt-5">
+          <div class="container">
+            <div class="row gy-4">
+              <div class="col-lg-4 col-md-6">
                 <h4 class="footer-title">Business Management System</h4>
                 <p>
-                    A modern inventory and sales management system developed to
-                    simplify stock management, sales tracking, profit analysis,
-                    and business reporting.
+                  A modern inventory and sales management system developed to
+                  simplify stock management, sales tracking, profit analysis,
+                  and business reporting.
                 </p>
-            </div>
-            <div class="col-lg-4 col-md-6">
+              </div>
+              <div class="col-lg-4 col-md-6">
                 <h4 class="footer-title">Developer</h4>
 
-                <p><i class="bi bi-person-fill"></i> <strong>Abdulfetah Shehab</strong></p>
+                <p>
+                  <i class="bi bi-person-fill"></i>
+                  <strong>Abdulfetah Shehab</strong>
+                </p>
 
                 <p><i class="bi bi-code-slash"></i> Full-Stack Web Developer</p>
 
@@ -249,41 +313,46 @@
                 <p><i class="bi bi-telephone-fill"></i> +251 932 173 857</p>
 
                 <p>
-                    <i class="bi bi-globe"></i>
-                    <a href="https://abdulfetahshehab.github.io/ibnushehab.com/" target="_blank">
-                        https://abdulfetahshehab.github.io/ibnushehab.com/
-                    </a>
+                  <i class="bi bi-globe"></i>
+                  <a
+                    href="https://abdulfetahshehab.github.io/ibnushehab.com/"
+                    target="_blank"
+                  >
+                    https://abdulfetahshehab.github.io/ibnushehab.com/
+                  </a>
                 </p>
-            </div>
-            <div class="col-lg-4 col-md-12">
+              </div>
+              <div class="col-lg-4 col-md-12">
                 <h4 class="footer-title">Quick Links</h4>
-                <a href="#">Dashboard</a><br>
-                <a href="#">Products</a><br>
-                <a href="#">Sales</a><br>
-                <a href="#">Reports</a><br>
+                <a href="#">Dashboard</a><br />
+                <a href="#">Products</a><br />
+                <a href="#">Sales</a><br />
+                <a href="#">Reports</a><br />
                 <a href="#">Settings</a>
                 <div class="social mt-3">
-                    <a href="https://github.com/abdulfetahshehab"><i class="bi bi-github"></i></a>
-                    <a href="https://t.me/Abdul_fetah"><i class="bi bi-telegram"></i></a>
-                    <a href="https://wa.me/251032173857"><i class="bi bi-whatsapp"></i></a>
+                  <a href="https://github.com/abdulfetahshehab"
+                    ><i class="bi bi-github"></i
+                  ></a>
+                  <a href="https://t.me/Abdul_fetah"
+                    ><i class="bi bi-telegram"></i
+                  ></a>
+                  <a href="https://wa.me/251032173857"
+                    ><i class="bi bi-whatsapp"></i
+                  ></a>
                 </div>
+              </div>
             </div>
-        </div>
-        <hr>
-        <div class="text-center">
-            © 2026 Business Management System |
-            Designed & Developed by
-            <strong>Abdulfetah Shehab</strong>
-        </div>
+            <hr />
+            <div class="text-center">
+              © 2026 Business Management System | Designed & Developed by
+              <strong>Abdulfetah Shehab</strong>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
-</footer>
-
-    </div>
-
-</div>
-
 
     <script src="asset/script.js"></script>
-       <script src="asset/layout.js"></script>
-
-</body>
+    <script src="asset/layout.js"></script>
+  </body>
+</html>
