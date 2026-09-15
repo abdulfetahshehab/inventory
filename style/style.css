@@ -664,32 +664,58 @@ body {
 /* table */
 .responsive-table {
   width: 100%;
-  overflow-x: scroll;
+  max-width: 100%;
+  display: block;
+}
+
+/* Make sure the table can actually scroll its cells */
+.responsive-table .dataTables_wrapper {
+  width: max-content;
+  min-width: 100%;
+  overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  border-radius: 8px;
 }
-/* nice scrollbar */
-.responsive-table::-webkit-scrollbar {
-  height: 7px;
-}
-.responsive-table::-webkit-scrollbar-thumb {
-  background: #adb5bd;
-  border-radius: 10px;
-}
-.responsive-table::-webkit-scrollbar-track {
-  background: #f1f3f5;
-}
-/* table */
+
 .responsive-table table {
   width: max-content;
   min-width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate; /* required for sticky borders to render */
+  border-spacing: 0; /* replaces border-collapse visually */
 }
+
 .responsive-table th,
 .responsive-table td {
   white-space: nowrap;
   vertical-align: middle;
+  border-right: 1px solid #dee2e6; /* fake the collapsed borders back */
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* ==== Sticky first column ==== */
+.responsive-table th:first-child,
+.responsive-table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: #fff; /* must be opaque or rows show through */
+  /* subtle shadow so it reads as "frozen" */
+  box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.15);
+}
+
+/* Header cell needs a higher z-index and its own bg (thead has table-primary) */
+.responsive-table thead th:first-child {
+  z-index: 3;
+  background: #3a84f4; /* match .table-primary bg */
+}
+
+.responsive-table table.dataTable {
+  display: block;
+  width: 100% !important; /* override DataTables inline width */
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Tablet */
